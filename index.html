@@ -1,467 +1,615 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>RC Montador de Móveis - Móveis Planejados</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue:wght@400;600;700&display=swap" rel="stylesheet">
-    
-    <style>
-        body {
-            /* font-family: 'Inter', sans-serif; */
-            font-family: 'Montserrat', sans-serif;
-            /* font-family: 'Bebas Neue', sans-serif; */
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
 
-        }
-        /* Cores baseadas no logo */
-        :root {
-            --color-primary-dark: #3D352A; /* Marrom escuro da textura do logo */
-            --color-primary-light: #F5F5F5; /* Cinza bem claro das letras RC */
-            --color-accent: #FFB800; /* Amarelo dourado dos detalhes RC */
-            --color-text-dark: #333333;
-            --color-text-light: #FFFFFF;
-        }
-        .bg-primary-dark { background-color: var(--color-primary-dark); }
-        .bg-primary-light { background-color: var(--color-primary-light); }
-        .bg-accent { background-color: var(--color-accent); }
-        .text-accent { color: var(--color-accent); }
-        .border-accent { border-color: var(--color-accent); }
-
-        h1, h2, h3 {
-        }
-
-        .carousel-container {
-            overflow: hidden;
-            position: relative;
-        }
-        .carousel-track {
-            display: flex;
-            transition: transform 0.5s ease-in-out;
-        }
-        .carousel-item {
-            min-width: 100%;
-            box-sizing: border-box;
-        }
-        .carousel-item-testimonial {
-            min-width: 80%; /* Mostrar mais de um se houver espaço */
-            box-sizing: border-box;
-        }
-        @media (min-width: 768px) {
-            .carousel-item-testimonial {
-                min-width: 50%;
-            }
-        }
-        @media (min-width: 1024px) {
-            .carousel-item-testimonial {
-                min-width: 33.33%;
-            }
-        }
-        .carousel-button {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background-color: rgba(0,0,0,0.5);
-            color: white;
-            border: none;
-            padding: 10px;
-            cursor: pointer;
-            z-index: 10;
-        }
-        .carousel-button.prev { left: 10px; }
-        .carousel-button.next { right: 10px; }
-
-        .testimonial-card {
-            background-color: white;
-            border: 1px solid #e0e0e0;
-            border-left: 5px solid var(--color-accent);
-        }
-    </style>
-</head>
-<body class="bg-primary-light text-gray-800">
-
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+  </head>
+  <body class="bg-primary-light text-gray-800">
     <header class="bg-primary-dark shadow-md sticky top-0 z-50">
-        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <img src="./assets/img/logo.jpeg" alt="Logo RC Montador de Móveis" class="h-12 md:h-16" onerror="this.onerror=null;this.src='https://placehold.co/100x64/3D352A/FFFFFF?text=Logo+RC';">
-            <nav class="space-x-4">
-                <a href="#sobre" class="text-white hover:text-accent">Sobre Nós</a>
-                <a href="#servicos" class="text-white hover:text-accent">Serviços</a>
-                <a href="#galeria" class="text-white hover:text-accent">Galeria</a>
-                <a href="#contato" class="bg-accent text-primary-dark font-semibold px-4 py-2 rounded-lg hover:bg-yellow-400 transition duration-300">Orçamento</a>
-            </nav>
-        </div>
+      <div
+        class="container mx-auto px-6 py-4 flex justify-between items-center"
+      >
+        <img
+          src="./assets/img/logo.jpeg"
+          alt="Logo RC Montador de Móveis"
+          class="h-12 md:h-16"
+          onerror="this.onerror=null;this.src='https://placehold.co/100x64/3D352A/FFFFFF?text=Logo+RC';"
+        />
+        <nav class="space-x-4">
+          <a href="#sobre" class="text-white hover:text-accent">Sobre Nós</a>
+          <a href="#servicos" class="text-white hover:text-accent">Serviços</a>
+          <a href="#galeria" class="text-white hover:text-accent">Galeria</a>
+          <a
+            href="#contato"
+            class="bg-accent text-primary-dark font-semibold px-4 py-2 rounded-lg hover:bg-yellow-400 transition duration-300"
+            >Orçamento</a
+          >
+        </nav>
+      </div>
     </header>
 
-    <section class="bg-primary-dark text-white py-20" style="background-image: url('./assets/img/ambiente-moderno.jpg') ; background-size: cover; background-position: center;">
-        <div class="container mx-auto px-6 text-center bg-black bg-opacity-50 p-10 rounded-lg">
-            <h1 class="text-4xl md:text-6xl font-bold mb-4">RC Montador de Móveis</h1>
-            <p class="text-xl md:text-2xl mb-2">Transformando Seus Espaços com Precisão e Qualidade.</p>
-            <p class="text-lg md:text-xl mb-8">Especialistas em montagem de móveis planejados e convencionais. Cuidamos de cada detalhe para que seu ambiente fique perfeito.</p>
-            <a href="#contato" class="bg-accent text-primary-dark font-bold text-lg px-8 py-4 rounded-lg hover:bg-yellow-400 transition duration-300 shadow-lg">
-                Solicite um Orçamento Gratuito <i class="fas fa-arrow-right ml-2"></i>
-            </a>
-        </div>
+    <section
+      class="bg-primary-dark text-white py-20"
+      style="
+        background-image: url('./assets/img/ambiente-moderno.jpg');
+        background-size: cover;
+        background-position: center;
+      "
+    >
+      <div
+        class="container mx-auto px-6 text-center bg-black bg-opacity-50 p-10 rounded-lg"
+      >
+        <h1 class="text-4xl md:text-6xl font-bold mb-4">
+          RC Montador de Móveis
+        </h1>
+        <p class="text-xl md:text-2xl mb-2">
+          Transformando Seus Espaços com Precisão e Qualidade.
+        </p>
+        <p class="text-lg md:text-xl mb-8">
+          Especialistas em montagem de móveis planejados e convencionais.
+          Cuidamos de cada detalhe para que seu ambiente fique perfeito.
+        </p>
+        <a
+          href="#contato"
+          class="bg-accent text-primary-dark font-bold text-lg px-8 py-4 rounded-lg hover:bg-yellow-400 transition duration-300 shadow-lg"
+        >
+          Solicite um Orçamento Gratuito <i class="fas fa-arrow-right ml-2"></i>
+        </a>
+      </div>
     </section>
 
     <section id="sobre" class="py-16 bg-primary-light">
-        <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-bold text-center mb-12 text-primary-dark">Por que Escolher a <span class="text-accent">RC Montador de Móveis</span>?</h2>
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div>
-                    <p class="text-lg mb-4 text-gray-700">Com anos de experiência no mercado, a RC Montador de Móveis se dedica a oferecer serviços de montagem com o mais alto padrão de qualidade e profissionalismo.</p>
-                    <p class="text-lg mb-6 text-gray-700">Entendemos a importância de cada peça no seu projeto de interiores e trabalhamos com precisão para garantir que seus móveis sejam montados de forma segura, eficiente e com acabamento impecável.</p>
-                    <img src="https://placehold.co/600x400/e0e0e0/333333?text=Equipe+Profissional+RC" alt="Equipe RC Montador de Móveis" class="rounded-lg shadow-xl">
-                </div>
-                <div class="space-y-6">
-                    <div class="flex items-start p-4 bg-white rounded-lg shadow-md">
-                        <i class="fas fa-check-circle text-accent text-3xl mr-4 mt-1"></i>
-                        <div>
-                            <h3 class="text-xl font-semibold text-primary-dark mb-1">Qualidade Garantida</h3>
-                            <p class="text-gray-600">Utilizamos as melhores técnicas e ferramentas para um acabamento perfeito.</p>
-                        </div>
-                    </div>
-                    <div class="flex items-start p-4 bg-white rounded-lg shadow-md">
-                        <i class="fas fa-users-cog text-accent text-3xl mr-4 mt-1"></i>
-                        <div>
-                            <h3 class="text-xl font-semibold text-primary-dark mb-1">Profissionais Experientes</h3>
-                            <p class="text-gray-600">Equipe qualificada e atenta a cada detalhe do seu projeto.</p>
-                        </div>
-                    </div>
-                    <div class="flex items-start p-4 bg-white rounded-lg shadow-md">
-                        <i class="fas fa-calendar-alt text-accent text-3xl mr-4 mt-1"></i>
-                        <div>
-                            <h3 class="text-xl font-semibold text-primary-dark mb-1">Compromisso com o Prazo</h3>
-                            <p class="text-gray-600">Respeitamos seu tempo e entregamos o serviço no cronograma combinado.</p>
-                        </div>
-                    </div>
-                     <div class="flex items-start p-4 bg-white rounded-lg shadow-md">
-                        <i class="fas fa-handshake text-accent text-3xl mr-4 mt-1"></i>
-                        <div>
-                            <h3 class="text-xl font-semibold text-primary-dark mb-1">Atendimento Personalizado</h3>
-                            <p class="text-gray-600">Entendemos sua necessidade para oferecer a melhor solução em montagem.</p>
-                        </div>
-                    </div>
-                </div>
+      <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-bold text-center mb-12 text-primary-dark">
+          Por que Escolher a
+          <span class="text-accent">RC Montador de Móveis</span>?
+        </h2>
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <p class="text-lg mb-4 text-gray-700">
+              Com anos de experiência no mercado, a RC Montador de Móveis se
+              dedica a oferecer serviços de montagem com o mais alto padrão de
+              qualidade e profissionalismo.
+            </p>
+            <p class="text-lg mb-6 text-gray-700">
+              Entendemos a importância de cada peça no seu projeto de interiores
+              e trabalhamos com precisão para garantir que seus móveis sejam
+              montados de forma segura, eficiente e com acabamento impecável.
+            </p>
+            <img
+              src="https://placehold.co/600x400/e0e0e0/333333?text=Equipe+Profissional+RC"
+              alt="Equipe RC Montador de Móveis"
+              class="rounded-lg shadow-xl"
+            />
+          </div>
+          <div class="space-y-6">
+            <div class="flex items-start p-4 bg-white rounded-lg shadow-md">
+              <i class="fas fa-check-circle text-accent text-3xl mr-4 mt-1"></i>
+              <div>
+                <h3 class="text-xl font-semibold text-primary-dark mb-1">
+                  Qualidade Garantida
+                </h3>
+                <p class="text-gray-600">
+                  Utilizamos as melhores técnicas e ferramentas para um
+                  acabamento perfeito.
+                </p>
+              </div>
             </div>
+            <div class="flex items-start p-4 bg-white rounded-lg shadow-md">
+              <i class="fas fa-users-cog text-accent text-3xl mr-4 mt-1"></i>
+              <div>
+                <h3 class="text-xl font-semibold text-primary-dark mb-1">
+                  Profissionais Experientes
+                </h3>
+                <p class="text-gray-600">
+                  Equipe qualificada e atenta a cada detalhe do seu projeto.
+                </p>
+              </div>
+            </div>
+            <div class="flex items-start p-4 bg-white rounded-lg shadow-md">
+              <i class="fas fa-calendar-alt text-accent text-3xl mr-4 mt-1"></i>
+              <div>
+                <h3 class="text-xl font-semibold text-primary-dark mb-1">
+                  Compromisso com o Prazo
+                </h3>
+                <p class="text-gray-600">
+                  Respeitamos seu tempo e entregamos o serviço no cronograma
+                  combinado.
+                </p>
+              </div>
+            </div>
+            <div class="flex items-start p-4 bg-white rounded-lg shadow-md">
+              <i class="fas fa-handshake text-accent text-3xl mr-4 mt-1"></i>
+              <div>
+                <h3 class="text-xl font-semibold text-primary-dark mb-1">
+                  Atendimento Personalizado
+                </h3>
+                <p class="text-gray-600">
+                  Entendemos sua necessidade para oferecer a melhor solução em
+                  montagem.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <section id="servicos" class="py-16 bg-gray-200">
-        <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-bold text-center mb-12 text-primary-dark">Serviços Que <span class="text-accent">Oferecemos</span></h2>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-                    <i class="fas fa-couch text-accent text-4xl mb-4"></i>
-                    <h3 class="text-xl font-semibold mb-2 text-primary-dark">Móveis Planejados</h3>
-                    <p class="text-gray-600">Montagem especializada de cozinhas, dormitórios, salas, banheiros e escritórios planejados.</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-                    <i class="fas fa-bed text-accent text-4xl mb-4"></i>
-                    <h3 class="text-xl font-semibold mb-2 text-primary-dark">Móveis Convencionais</h3>
-                    <p class="text-gray-600">Montagem de móveis comprados prontos, como camas, guarda-roupas, estantes e mais.</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-                    <i class="fas fa-tv text-accent text-4xl mb-4"></i>
-                    <h3 class="text-xl font-semibold mb-2 text-primary-dark">Instalação de Painéis de TV</h3>
-                    <p class="text-gray-600">Fixação segura e alinhamento perfeito de painéis para sua sala ou quarto.</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-                    <i class="fas fa-door-closed text-accent text-4xl mb-4"></i>
-                    <h3 class="text-xl font-semibold mb-2 text-primary-dark">Portas e Divisórias</h3>
-                    <p class="text-gray-600">Instalação de portas de correr e divisórias para otimizar seus ambientes.</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-                    <i class="fas fa-tools text-accent text-4xl mb-4"></i>
-                    <h3 class="text-xl font-semibold mb-2 text-primary-dark">Ajustes e Reparos</h3>
-                    <p class="text-gray-600">Realizamos ajustes e pequenos reparos em móveis já montados.</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-                    <i class="fas fa-truck-moving text-accent text-4xl mb-4"></i>
-                    <h3 class="text-xl font-semibold mb-2 text-primary-dark">Desmontagem e Remontagem</h3>
-                    <p class="text-gray-600">Serviço especializado para mudanças, garantindo a integridade dos seus móveis.</p>
-                </div>
-            </div>
+      <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-bold text-center mb-12 text-primary-dark">
+          Serviços Que <span class="text-accent">Oferecemos</span>
+        </h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div
+            class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
+          >
+            <i class="fas fa-couch text-accent text-4xl mb-4"></i>
+            <h3 class="text-xl font-semibold mb-2 text-primary-dark">
+              Móveis Planejados
+            </h3>
+            <p class="text-gray-600">
+              Montagem especializada de cozinhas, dormitórios, salas, banheiros
+              e escritórios planejados.
+            </p>
+          </div>
+          <div
+            class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
+          >
+            <i class="fas fa-bed text-accent text-4xl mb-4"></i>
+            <h3 class="text-xl font-semibold mb-2 text-primary-dark">
+              Móveis Convencionais
+            </h3>
+            <p class="text-gray-600">
+              Montagem de móveis comprados prontos, como camas, guarda-roupas,
+              estantes e mais.
+            </p>
+          </div>
+          <div
+            class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
+          >
+            <i class="fas fa-tv text-accent text-4xl mb-4"></i>
+            <h3 class="text-xl font-semibold mb-2 text-primary-dark">
+              Instalação de Painéis de TV
+            </h3>
+            <p class="text-gray-600">
+              Fixação segura e alinhamento perfeito de painéis para sua sala ou
+              quarto.
+            </p>
+          </div>
+          <div
+            class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
+          >
+            <i class="fas fa-door-closed text-accent text-4xl mb-4"></i>
+            <h3 class="text-xl font-semibold mb-2 text-primary-dark">
+              Portas e Divisórias
+            </h3>
+            <p class="text-gray-600">
+              Instalação de portas de correr e divisórias para otimizar seus
+              ambientes.
+            </p>
+          </div>
+          <div
+            class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
+          >
+            <i class="fas fa-tools text-accent text-4xl mb-4"></i>
+            <h3 class="text-xl font-semibold mb-2 text-primary-dark">
+              Ajustes e Reparos
+            </h3>
+            <p class="text-gray-600">
+              Realizamos ajustes e pequenos reparos em móveis já montados.
+            </p>
+          </div>
+          <div
+            class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
+          >
+            <i class="fas fa-truck-moving text-accent text-4xl mb-4"></i>
+            <h3 class="text-xl font-semibold mb-2 text-primary-dark">
+              Desmontagem e Remontagem
+            </h3>
+            <p class="text-gray-600">
+              Serviço especializado para mudanças, garantindo a integridade dos
+              seus móveis.
+            </p>
+          </div>
         </div>
+      </div>
     </section>
 
     <section id="galeria" class="py-16 bg-primary-dark text-white">
-        <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-bold text-center mb-12">Confira Alguns de <span class="text-accent">Nossos Trabalhos</span></h2>
-            <div id="galleryCarousel" class="carousel-container rounded-lg">
-                <div class="carousel-track">
-                    <div class="carousel-item p-2">
-                        <img src="./assets/img/WhatsApp Image 2025-05-31 at 15.41.31.jpeg" alt="Montagem de Painel de TV" class="w-full h-96 object-cover lg:object-contain rounded-md shadow-lg" onerror="this.onerror=null;this.src='https://placehold.co/600x384/cccccc/969696?text=Imagem+Indisponível';">
-                        <p class="text-center mt-2 text-sm">Painel de TV instalado com precisão</p>
-                    </div>
-                    <div class="carousel-item p-2">
-                        <img src="./assets/img/WhatsApp Image 2025-05-31 at 15.41.32.jpeg" alt="Instalação de Portas de Correr" class="w-full h-96 object-cover lg:object-contain rounded-md shadow-lg" onerror="this.onerror=null;this.src='https://placehold.co/600x384/cccccc/969696?text=Imagem+Indisponível';">
-                        <p class="text-center mt-2 text-sm">Portas de correr para divisão de ambientes</p>
-                    </div>
-                    <div class="carousel-item p-2">
-                        <img src="./assets/img/WhatsApp Image 2025-05-31 at 15.41.30 (1).jpeg" alt="Peças de móveis para montagem" class="w-full h-96 object-cover lg:object-contain rounded-md shadow-lg" onerror="this.onerror=null;this.src='https://placehold.co/600x384/cccccc/969696?text=Imagem+Indisponível';">
-                        <p class="text-center mt-2 text-sm">Organização das peças antes da montagem</p>
-                    </div>
-                    <div class="carousel-item p-2">
-                        <img src="./assets/img/WhatsApp Image 2025-05-31 at 15.41.30.jpeg" alt="Visão de ambiente com divisória" class="w-full h-96 object-cover lg:object-contain rounded-md shadow-lg" onerror="this.onerror=null;this.src='https://placehold.co/600x384/cccccc/969696?text=Imagem+Indisponível';">
-                        <p class="text-center mt-2 text-sm">Detalhe de instalação em andamento</p>
-                    </div>
-                    <div class="carousel-item p-2">
-                        <img src="./assets/img/WhatsApp Image 2025-05-31 at 15.41.28.jpeg" alt="Montagem de Cama" class="w-full h-96 object-cover lg:object-contain rounded-md shadow-lg" onerror="this.onerror=null;this.src='https://placehold.co/600x384/cccccc/969696?text=Imagem+Indisponível';">
-                        <p class="text-center mt-2 text-sm">Cama de solteiro com estrutura reforçada</p>
-                    </div>
-                    <div class="carousel-item p-2">
-                        <img src="./assets/img/WhatsApp Image 2025-05-31 at 15.41.29.jpeg" alt="Montagem de Beliche" class="w-full h-96 object-cover lg:object-contain rounded-md shadow-lg" onerror="this.onerror=null;this.src='https://placehold.co/600x384/cccccc/969696?text=Imagem+Indisponível';">
-                         <p class="text-center mt-2 text-sm">Beliche montado com segurança</p>
-                    </div>
-                </div>
-                <button class="carousel-button prev"><i class="fas fa-chevron-left"></i></button>
-                <button class="carousel-button next"><i class="fas fa-chevron-right"></i></button>
+      <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-bold text-center mb-12">
+          Confira Alguns de <span class="text-accent">Nossos Trabalhos</span>
+        </h2>
+        <div id="galleryCarousel" class="carousel-container rounded-lg">
+          <div class="carousel-track">
+            <div class="carousel-item p-2">
+              <img
+                src="./assets/img/WhatsApp Image 2025-05-31 at 15.41.31.jpeg"
+                alt="Montagem de Painel de TV"
+                class="w-full h-96 object-cover lg:object-contain rounded-md shadow-lg"
+                onerror="this.onerror=null;this.src='https://placehold.co/600x384/cccccc/969696?text=Imagem+Indisponível';"
+              />
+              <p class="text-center mt-2 text-sm">
+                Painel de TV instalado com precisão
+              </p>
             </div>
+            <div class="carousel-item p-2">
+              <img
+                src="./assets/img/WhatsApp Image 2025-05-31 at 15.41.32.jpeg"
+                alt="Instalação de Portas de Correr"
+                class="w-full h-96 object-cover lg:object-contain rounded-md shadow-lg"
+                onerror="this.onerror=null;this.src='https://placehold.co/600x384/cccccc/969696?text=Imagem+Indisponível';"
+              />
+              <p class="text-center mt-2 text-sm">
+                Portas de correr para divisão de ambientes
+              </p>
+            </div>
+            <div class="carousel-item p-2">
+              <img
+                src="./assets/img/WhatsApp Image 2025-05-31 at 15.41.30 (1).jpeg"
+                alt="Peças de móveis para montagem"
+                class="w-full h-96 object-cover lg:object-contain rounded-md shadow-lg"
+                onerror="this.onerror=null;this.src='https://placehold.co/600x384/cccccc/969696?text=Imagem+Indisponível';"
+              />
+              <p class="text-center mt-2 text-sm">
+                Organização das peças antes da montagem
+              </p>
+            </div>
+            <div class="carousel-item p-2">
+              <img
+                src="./assets/img/WhatsApp Image 2025-05-31 at 15.41.30.jpeg"
+                alt="Visão de ambiente com divisória"
+                class="w-full h-96 object-cover lg:object-contain rounded-md shadow-lg"
+                onerror="this.onerror=null;this.src='https://placehold.co/600x384/cccccc/969696?text=Imagem+Indisponível';"
+              />
+              <p class="text-center mt-2 text-sm">
+                Detalhe de instalação em andamento
+              </p>
+            </div>
+            <div class="carousel-item p-2">
+              <img
+                src="./assets/img/WhatsApp Image 2025-05-31 at 15.41.28.jpeg"
+                alt="Montagem de Cama"
+                class="w-full h-96 object-cover lg:object-contain rounded-md shadow-lg"
+                onerror="this.onerror=null;this.src='https://placehold.co/600x384/cccccc/969696?text=Imagem+Indisponível';"
+              />
+              <p class="text-center mt-2 text-sm">
+                Cama de solteiro com estrutura reforçada
+              </p>
+            </div>
+            <div class="carousel-item p-2">
+              <img
+                src="./assets/img/WhatsApp Image 2025-05-31 at 15.41.29.jpeg"
+                alt="Montagem de Beliche"
+                class="w-full h-96 object-cover lg:object-contain rounded-md shadow-lg"
+                onerror="this.onerror=null;this.src='https://placehold.co/600x384/cccccc/969696?text=Imagem+Indisponível';"
+              />
+              <p class="text-center mt-2 text-sm">
+                Beliche montado com segurança
+              </p>
+            </div>
+          </div>
+          <button class="carousel-button prev">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <button class="carousel-button next">
+            <i class="fas fa-chevron-right"></i>
+          </button>
         </div>
+      </div>
     </section>
 
     <section id="depoimentos" class="py-16 bg-primary-light">
-        <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-bold text-center mb-12 text-primary-dark">O Que Nossos <span class="text-accent">Clientes Dizem</span></h2>
-            <div id="testimonialsCarousel" class="carousel-container">
-                <div class="carousel-track">
-                    <div class="carousel-item carousel-item-testimonial p-4">
-                        <div class="testimonial-card p-6 rounded-lg shadow-lg h-full flex flex-col justify-between">
-                            <div>
-                                <i class="fas fa-quote-left text-accent text-3xl mb-4"></i>
-                                <p class="text-gray-700 mb-4 italic">"Contratei a RC para montar todos os móveis do meu apartamento novo e fiquei impressionado com a agilidade e o cuidado. O montador foi super profissional e deixou tudo impecável. Recomendo demais!"</p>
-                            </div>
-                            <div>
-                                <p class="font-semibold text-primary-dark">Carlos Alberto S.</p>
-                                <p class="text-sm text-gray-500">Montagem Completa de Apartamento</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item carousel-item-testimonial p-4">
-                        <div class="testimonial-card p-6 rounded-lg shadow-lg h-full flex flex-col justify-between">
-                             <div>
-                                <i class="fas fa-quote-left text-accent text-3xl mb-4"></i>
-                                <p class="text-gray-700 mb-4 italic">"O painel da minha sala ficou perfeito! A instalação foi rápida e o resultado final superou minhas expectativas. A equipe da RC é muito atenciosa."</p>
-                            </div>
-                            <div>
-                                <p class="font-semibold text-primary-dark">Mariana F.</p>
-                                <p class="text-sm text-gray-500">Instalação de Painel de TV</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item carousel-item-testimonial p-4">
-                        <div class="testimonial-card p-6 rounded-lg shadow-lg h-full flex flex-col justify-between">
-                            <div>
-                                <i class="fas fa-quote-left text-accent text-3xl mb-4"></i>
-                                <p class="text-gray-700 mb-4 italic">"Precisava montar um beliche para meus filhos e estava preocupada com a segurança. A RC Montador de Móveis fez um trabalho excelente, o beliche ficou super firme. Ótimo serviço!"</p>
-                            </div>
-                            <div>
-                                <p class="font-semibold text-primary-dark">Juliana P.</p>
-                                <p class="text-sm text-gray-500">Montagem de Beliche</p>
-                            </div>
-                        </div>
-                    </div>
-                     <div class="carousel-item carousel-item-testimonial p-4">
-                        <div class="testimonial-card p-6 rounded-lg shadow-lg h-full flex flex-col justify-between">
-                            <div>
-                                <i class="fas fa-quote-left text-accent text-3xl mb-4"></i>
-                                <p class="text-gray-700 mb-4 italic">"Serviço de alta qualidade, desde o primeiro contato até a finalização da montagem. O resultado ficou incrível, exatamente como eu queria. Muito obrigado, RC!"</p>
-                            </div>
-                            <div>
-                                <p class="font-semibold text-primary-dark">Ricardo L.</p>
-                                <p class="text-sm text-gray-500">Móveis Planejados para Quarto</p>
-                            </div>
-                        </div>
-                    </div>
+      <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-bold text-center mb-12 text-primary-dark">
+          O Que Nossos <span class="text-accent">Clientes Dizem</span>
+        </h2>
+        <div id="testimonialsCarousel" class="carousel-container">
+          <div class="carousel-track">
+            <div class="carousel-item carousel-item-testimonial p-4">
+              <div
+                class="testimonial-card p-6 rounded-lg shadow-lg h-full flex flex-col justify-between"
+              >
+                <div>
+                  <i class="fas fa-quote-left text-accent text-3xl mb-4"></i>
+                  <p class="text-gray-700 mb-4 italic">
+                    "Contratei a RC para montar todos os móveis do meu
+                    apartamento novo e fiquei impressionado com a agilidade e o
+                    cuidado. O montador foi super profissional e deixou tudo
+                    impecável. Recomendo demais!"
+                  </p>
                 </div>
-                <button class="carousel-button prev"><i class="fas fa-chevron-left"></i></button>
-                <button class="carousel-button next"><i class="fas fa-chevron-right"></i></button>
+                <div>
+                  <p class="font-semibold text-primary-dark">
+                    Carlos Alberto S.
+                  </p>
+                  <p class="text-sm text-gray-500">
+                    Montagem Completa de Apartamento
+                  </p>
+                </div>
+              </div>
             </div>
+            <div class="carousel-item carousel-item-testimonial p-4">
+              <div
+                class="testimonial-card p-6 rounded-lg shadow-lg h-full flex flex-col justify-between"
+              >
+                <div>
+                  <i class="fas fa-quote-left text-accent text-3xl mb-4"></i>
+                  <p class="text-gray-700 mb-4 italic">
+                    "O painel da minha sala ficou perfeito! A instalação foi
+                    rápida e o resultado final superou minhas expectativas. A
+                    equipe da RC é muito atenciosa."
+                  </p>
+                </div>
+                <div>
+                  <p class="font-semibold text-primary-dark">Mariana F.</p>
+                  <p class="text-sm text-gray-500">
+                    Instalação de Painel de TV
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item carousel-item-testimonial p-4">
+              <div
+                class="testimonial-card p-6 rounded-lg shadow-lg h-full flex flex-col justify-between"
+              >
+                <div>
+                  <i class="fas fa-quote-left text-accent text-3xl mb-4"></i>
+                  <p class="text-gray-700 mb-4 italic">
+                    "Precisava montar um beliche para meus filhos e estava
+                    preocupada com a segurança. A RC Montador de Móveis fez um
+                    trabalho excelente, o beliche ficou super firme. Ótimo
+                    serviço!"
+                  </p>
+                </div>
+                <div>
+                  <p class="font-semibold text-primary-dark">Juliana P.</p>
+                  <p class="text-sm text-gray-500">Montagem de Beliche</p>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item carousel-item-testimonial p-4">
+              <div
+                class="testimonial-card p-6 rounded-lg shadow-lg h-full flex flex-col justify-between"
+              >
+                <div>
+                  <i class="fas fa-quote-left text-accent text-3xl mb-4"></i>
+                  <p class="text-gray-700 mb-4 italic">
+                    "Serviço de alta qualidade, desde o primeiro contato até a
+                    finalização da montagem. O resultado ficou incrível,
+                    exatamente como eu queria. Muito obrigado, RC!"
+                  </p>
+                </div>
+                <div>
+                  <p class="font-semibold text-primary-dark">Ricardo L.</p>
+                  <p class="text-sm text-gray-500">
+                    Móveis Planejados para Quarto
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-button prev">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <button class="carousel-button next">
+            <i class="fas fa-chevron-right"></i>
+          </button>
         </div>
+      </div>
     </section>
 
     <section id="processo" class="py-16 bg-gray-200">
-        <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-bold text-center mb-12 text-primary-dark">Nosso Processo <span class="text-accent">Simplificado</span></h2>
-            <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-8 text-center">
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <i class="fas fa-comments text-accent text-4xl mb-4"></i>
-                    <h3 class="text-lg font-semibold mb-1 text-primary-dark">1. Contato Inicial</h3>
-                    <p class="text-sm text-gray-600">Você nos conta sobre seu projeto.</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <i class="fas fa-file-invoice-dollar text-accent text-4xl mb-4"></i>
-                    <h3 class="text-lg font-semibold mb-1 text-primary-dark">2. Orçamento</h3>
-                    <p class="text-sm text-gray-600">Enviamos uma proposta clara e detalhada.</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <i class="fas fa-calendar-check text-accent text-4xl mb-4"></i>
-                    <h3 class="text-lg font-semibold mb-1 text-primary-dark">3. Agendamento</h3>
-                    <p class="text-sm text-gray-600">Definimos a melhor data para a montagem.</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <i class="fas fa-hard-hat text-accent text-4xl mb-4"></i>
-                    <h3 class="text-lg font-semibold mb-1 text-primary-dark">4. Execução</h3>
-                    <p class="text-sm text-gray-600">Realizamos a montagem com expertise.</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <i class="fas fa-hand-sparkles text-accent text-4xl mb-4"></i>
-                    <h3 class="text-lg font-semibold mb-1 text-primary-dark">5. Entrega</h3>
-                    <p class="text-sm text-gray-600">Seu ambiente transformado e pronto!</p>
-                </div>
-            </div>
+      <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-bold text-center mb-12 text-primary-dark">
+          Nosso Processo <span class="text-accent">Simplificado</span>
+        </h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-8 text-center">
+          <div class="bg-white p-6 rounded-lg shadow-md">
+            <i class="fas fa-comments text-accent text-4xl mb-4"></i>
+            <h3 class="text-lg font-semibold mb-1 text-primary-dark">
+              1. Contato Inicial
+            </h3>
+            <p class="text-sm text-gray-600">
+              Você nos conta sobre seu projeto.
+            </p>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow-md">
+            <i class="fas fa-file-invoice-dollar text-accent text-4xl mb-4"></i>
+            <h3 class="text-lg font-semibold mb-1 text-primary-dark">
+              2. Orçamento
+            </h3>
+            <p class="text-sm text-gray-600">
+              Enviamos uma proposta clara e detalhada.
+            </p>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow-md">
+            <i class="fas fa-calendar-check text-accent text-4xl mb-4"></i>
+            <h3 class="text-lg font-semibold mb-1 text-primary-dark">
+              3. Agendamento
+            </h3>
+            <p class="text-sm text-gray-600">
+              Definimos a melhor data para a montagem.
+            </p>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow-md">
+            <i class="fas fa-hard-hat text-accent text-4xl mb-4"></i>
+            <h3 class="text-lg font-semibold mb-1 text-primary-dark">
+              4. Execução
+            </h3>
+            <p class="text-sm text-gray-600">
+              Realizamos a montagem com expertise.
+            </p>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow-md">
+            <i class="fas fa-hand-sparkles text-accent text-4xl mb-4"></i>
+            <h3 class="text-lg font-semibold mb-1 text-primary-dark">
+              5. Entrega
+            </h3>
+            <p class="text-sm text-gray-600">
+              Seu ambiente transformado e pronto!
+            </p>
+          </div>
         </div>
+      </div>
     </section>
 
     <section id="contato" class="py-20 bg-accent text-primary-dark">
-        <div class="container mx-auto px-6 text-center">
-            <h2 class="text-3xl md:text-4xl font-bold mb-6">Pronto para Ter Seus Móveis Montados com Perfeição?</h2>
-            <p class="text-lg md:text-xl mb-8 max-w-2xl mx-auto">Não perca mais tempo e nem se preocupe com a montagem. Deixe com quem entende e garanta um resultado impecável!</p>
-            
-            <div class="max-w-lg mx-auto bg-white p-8 rounded-lg shadow-2xl">
-                <h3 class="text-2xl font-semibold mb-6 text-primary-dark">Fale Conosco Agora!</h3>
-                <form action="#" method="POST"> <div class="mb-4">
-                        <label for="name" class="block text-left text-gray-700 font-medium mb-1">Nome Completo</label>
-                        <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-accent focus:border-accent" required>
-                    </div>
-                    <div class="mb-4">
-                        <label for="email" class="block text-left text-gray-700 font-medium mb-1">E-mail</label>
-                        <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-accent focus:border-accent" required>
-                    </div>
-                    <div class="mb-4">
-                        <label for="phone" class="block text-left text-gray-700 font-medium mb-1">Telefone (WhatsApp)</label>
-                        <input type="tel" id="phone" name="phone" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-accent focus:border-accent" required>
-                    </div>
-                    <div class="mb-6">
-                        <label for="message" class="block text-left text-gray-700 font-medium mb-1">Descreva seu projeto ou dúvida</label>
-                        <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-accent focus:border-accent" required></textarea>
-                    </div>
-                    <button type="submit" class="w-full bg-primary-dark text-white font-bold text-lg px-8 py-3 rounded-lg hover:bg-gray-700 transition duration-300">
-                        Enviar Mensagem <i class="fas fa-paper-plane ml-2"></i>
-                    </button>
-                </form>
-                <p class="mt-6 text-gray-600">Ou se preferir, entre em contato direto:</p>
-                <a href="https://wa.me/55SEUNUMEROWHATSAPP" target="_blank" class="mt-2 inline-block bg-green-500 text-white font-semibold px-6 py-3 rounded-lg hover:bg-green-600 transition duration-300">
-                    <i class="fab fa-whatsapp mr-2"></i> Chamar no WhatsApp
-                </a>
-                 <p class="mt-2 text-gray-600"><i class="fas fa-phone mr-2"></i> (XX) XXXXX-XXXX</p>
-                 <p class="mt-1 text-gray-600"><i class="fas fa-envelope mr-2"></i> seuemail@exemplo.com</p>
+      <div class="container mx-auto px-6 text-center">
+        <h2 class="text-3xl md:text-4xl font-bold mb-6">
+          Pronto para Ter Seus Móveis Montados com Perfeição?
+        </h2>
+        <p class="text-lg md:text-xl mb-8 max-w-2xl mx-auto">
+          Não perca mais tempo e nem se preocupe com a montagem. Deixe com quem
+          entende e garanta um resultado impecável!
+        </p>
+
+        <div class="max-w-lg mx-auto bg-white p-8 rounded-lg shadow-2xl">
+          <h3 class="text-2xl font-semibold mb-6 text-primary-dark">
+            Fale Conosco Agora!
+          </h3>
+          <form action="#" method="POST">
+            <div class="mb-4">
+              <label
+                for="name"
+                class="block text-left text-gray-700 font-medium mb-1"
+                >Nome Completo</label
+              >
+              <input
+                type="text"
+                id="name"
+                name="name"
+                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-accent focus:border-accent"
+                required
+              />
             </div>
+            <div class="mb-4">
+              <label
+                for="email"
+                class="block text-left text-gray-700 font-medium mb-1"
+                >E-mail</label
+              >
+              <input
+                type="email"
+                id="email"
+                name="email"
+                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-accent focus:border-accent"
+                required
+              />
+            </div>
+            <div class="mb-4">
+              <label
+                for="phone"
+                class="block text-left text-gray-700 font-medium mb-1"
+                >Telefone (WhatsApp)</label
+              >
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-accent focus:border-accent"
+                required
+              />
+            </div>
+            <div class="mb-6">
+              <label
+                for="message"
+                class="block text-left text-gray-700 font-medium mb-1"
+                >Descreva seu projeto ou dúvida</label
+              >
+              <textarea
+                id="message"
+                name="message"
+                rows="4"
+                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-accent focus:border-accent"
+                required
+              ></textarea>
+            </div>
+            <button
+              type="submit"
+              class="w-full bg-primary-dark text-white font-bold text-lg px-8 py-3 rounded-lg hover:bg-gray-700 transition duration-300"
+            >
+              Enviar Mensagem <i class="fas fa-paper-plane ml-2"></i>
+            </button>
+          </form>
+          <p class="mt-6 text-gray-600">
+            Ou se preferir, entre em contato direto:
+          </p>
+          <a
+            href="https://wa.me/55SEUNUMEROWHATSAPP"
+            target="_blank"
+            class="mt-2 inline-block bg-green-500 text-white font-semibold px-6 py-3 rounded-lg hover:bg-green-600 transition duration-300"
+          >
+            <i class="fab fa-whatsapp mr-2"></i> Chamar no WhatsApp
+          </a>
+          <p class="mt-2 text-gray-600">
+            <i class="fas fa-phone mr-2"></i> (XX) XXXXX-XXXX
+          </p>
+          <p class="mt-1 text-gray-600">
+            <i class="fas fa-envelope mr-2"></i> seuemail@exemplo.com
+          </p>
         </div>
+      </div>
     </section>
 
     <footer class="bg-primary-dark text-white py-10">
-        <div class="container mx-auto px-6 text-center">
-            <img src="logo.jpeg" alt="Logo RC Montador de Móveis" class="h-12 mx-auto mb-4" onerror="this.onerror=null;this.src='https://placehold.co/100x48/3D352A/FFFFFF?text=Logo+RC';">
-            <p class="mb-2">RC Montador de Móveis</p>
-            <p class="mb-1">Atendemos XXX e Região.</p>
-            <p class="mb-4 text-sm">Transformando seus ambientes com qualidade e profissionalismo.</p>
-            <div class="flex justify-center space-x-4 mb-4">
-                <a href="#" class="text-white hover:text-accent"><i class="fab fa-facebook-f fa-lg"></i></a>
-                <a href="#" class="text-white hover:text-accent"><i class="fab fa-instagram fa-lg"></i></a>
-                <a href="https://wa.me/55SEUNUMEROWHATSAPP" target="_blank" class="text-white hover:text-accent"><i class="fab fa-whatsapp fa-lg"></i></a>
-            </div>
-            <p class="text-sm text-gray-400">&copy; <span id="currentYear"></span> RC Montador de Móveis. Todos os direitos reservados.</p>
-            <!-- <p class="text-xs text-gray-500 mt-1">Desenvolvido com <i class="fas fa-heart text-red-500"></i></p> -->
+      <div class="container mx-auto px-6 text-center">
+        <img
+          src="logo.jpeg"
+          alt="Logo RC Montador de Móveis"
+          class="h-12 mx-auto mb-4"
+          onerror="this.onerror=null;this.src='https://placehold.co/100x48/3D352A/FFFFFF?text=Logo+RC';"
+        />
+        <p class="mb-2">RC Montador de Móveis</p>
+        <p class="mb-1">Atendemos XXX e Região.</p>
+        <p class="mb-4 text-sm">
+          Transformando seus ambientes com qualidade e profissionalismo.
+        </p>
+        <div class="flex justify-center space-x-4 mb-4">
+          <a href="#" class="text-white hover:text-accent"
+            ><i class="fab fa-facebook-f fa-lg"></i
+          ></a>
+          <a href="#" class="text-white hover:text-accent"
+            ><i class="fab fa-instagram fa-lg"></i
+          ></a>
+          <a
+            href="https://wa.me/55SEUNUMEROWHATSAPP"
+            target="_blank"
+            class="text-white hover:text-accent"
+            ><i class="fab fa-whatsapp fa-lg"></i
+          ></a>
         </div>
+        <p class="text-sm text-gray-400">
+          &copy; <span id="currentYear"></span> RC Montador de Móveis. Todos os
+          direitos reservados.
+        </p>
+        <!-- <p class="text-xs text-gray-500 mt-1">Desenvolvido com <i class="fas fa-heart text-red-500"></i></p> -->
+      </div>
     </footer>
 
-    <script>
-        // Script para o ano atual no rodapé
-        document.getElementById('currentYear').textContent = new Date().getFullYear();
-
-        // Scripts para os Carrosséis
-        function setupCarousel(carouselId) {
-            const carousel = document.getElementById(carouselId);
-            if (!carousel) return;
-
-            const track = carousel.querySelector('.carousel-track');
-            const items = Array.from(track.children);
-            const nextButton = carousel.querySelector('.carousel-button.next');
-            const prevButton = carousel.querySelector('.carousel-button.prev');
-
-            if (!track || items.length === 0 || !nextButton || !prevButton) return;
-
-            let itemWidth;
-            let currentIndex = 0;
-            let itemsPerPage = 1; 
-
-            function updateItemsPerPageAndWidth() {
-                // Recalcula a largura do item (pode mudar se o padding/margin do item for responsivo)
-                itemWidth = items[0].getBoundingClientRect().width;
-
-                if (carouselId === 'testimonialsCarousel') {
-                    if (window.innerWidth >= 1024) { // lg
-                        itemsPerPage = 3;
-                    } else if (window.innerWidth >= 768) { // md
-                        itemsPerPage = 2;
-                    } else {
-                        itemsPerPage = 1; 
-                    }
-                } else { // galleryCarousel
-                    itemsPerPage = 1;
-                }
-            }
-            
-            function updateCarouselPosition() {
-                // O deslocamento é o índice atual multiplicado pela largura de um item individual.
-                // Não dividimos por itemsPerPage aqui, pois o track se move por "itemWidth"
-                track.style.transform = `translateX(-${currentIndex * itemWidth}px)`;
-            }
-
-            function showSlide(index) {
-                // O maxIndex é o número de itens menos a quantidade de itens visíveis por página.
-                const maxIndex = items.length - itemsPerPage;
-                
-                if (index > maxIndex) { // Se tentar ir além do último slide "possível"
-                    currentIndex = (items.length > itemsPerPage) ? 0 : maxIndex; // Volta para o início se houver loop, ou fica no maxIndex
-                } else if (index < 0) { // Se tentar ir antes do primeiro slide
-                    currentIndex = maxIndex; // Vai para o último slide "possível"
-                } else {
-                    currentIndex = index;
-                }
-                updateCarouselPosition();
-            }
-            
-            updateItemsPerPageAndWidth(); 
-
-            nextButton.addEventListener('click', () => {
-                // Avança para o próximo "conjunto" de itens. Se currentIndex + itemsPerPage ultrapassar o total, volta ao início.
-                if (currentIndex < items.length - itemsPerPage) {
-                    showSlide(currentIndex + 1);
-                } else {
-                     showSlide(0); // Loop para o início
-                }
-            });
-
-            prevButton.addEventListener('click', () => {
-                 if (currentIndex > 0) {
-                    showSlide(currentIndex - 1);
-                } else {
-                     showSlide(items.length - itemsPerPage); // Loop para o fim
-                }
-            });
-            
-            window.addEventListener('resize', () => {
-                updateItemsPerPageAndWidth();
-                // Mantém o slide atual visível, ajustando a posição se necessário
-                showSlide(currentIndex); 
-            });
-
-            // Inicializa a posição
-            showSlide(0);
-        }
-
-        document.addEventListener('DOMContentLoaded', () => {
-            setupCarousel('galleryCarousel');
-            setupCarousel('testimonialsCarousel');
-        });
-    </script>
-
-</body>
+    <script src="./assets/js/script.js"></script>
+  </body>
 </html>

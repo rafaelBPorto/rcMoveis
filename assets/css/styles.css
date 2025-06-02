@@ -1,0 +1,95 @@
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+/* Cores baseadas no logo */
+:root {
+  --color-primary-dark: #3d352a;
+  --color-primary-light: #f5f5f5;
+  --color-accent: #ffb800;
+  --color-text-dark: #333333;
+  --color-text-light: #ffffff;
+}
+
+.bg-primary-dark {
+  background-color: var(--color-primary-dark);
+}
+
+.bg-primary-light {
+  background-color: var(--color-primary-light);
+}
+
+.bg-accent {
+  background-color: var(--color-accent);
+}
+
+.text-accent {
+  color: var(--color-accent);
+}
+
+.border-accent {
+  border-color: var(--color-accent);
+}
+
+.carousel-container {
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+  min-width: 100%;
+  box-sizing: border-box;
+}
+
+.carousel-item-testimonial {
+  min-width: 80%;
+  box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+  .carousel-item-testimonial {
+    min-width: 50%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .carousel-item-testimonial {
+    min-width: 33.33%;
+  }
+
+  #galleryCarousel .carousel-item {
+    min-width: 33.3333%;
+    max-width: 33.3333%;
+  }
+}
+
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.carousel-button.prev {
+  left: 10px;
+}
+
+.carousel-button.next {
+  right: 10px;
+}
+
+.testimonial-card {
+  background-color: white;
+  border: 1px solid #e0e0e0;
+  border-left: 5px solid var(--color-accent);
+}
