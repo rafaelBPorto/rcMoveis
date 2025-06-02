@@ -1,0 +1,29 @@
+{
+  "name": "rc-moveis",
+  "version": "1.0.0",
+  "description": "Site RC Montador de Móveis - Móveis Planejados",
+  "main": "index.html",
+  "scripts": {
+    "dev": "tailwindcss -i ./input.css -o ./assets/css/tailwind.css --watch",
+    "build": "tailwindcss -i ./input.css -o ./assets/css/tailwind.css",
+    "build-prod": "tailwindcss -i ./input.css -o ./assets/css/tailwind.css --minify",
+    "clean": "rm -f ./assets/css/tailwind.css"
+  },
+  "keywords": [
+    "montagem",
+    "moveis",
+    "planejados",
+    "marcenaria",
+    "ribeirao-preto",
+    "cozinha-planejada",
+    "guarda-roupa",
+    "montador-profissional",
+    "instalacao-moveis",
+    "sp-interior"
+  ],
+  "author": "RC Montador de Móveis",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.4.0"
+  }
+}

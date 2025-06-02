@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Cores customizadas */
+.bg-primary-dark {
+  background-color: #3d352a;
+}
+
+.bg-primary-light {
+  background-color: #f5f5f5;
+}
+
+.bg-accent {
+  background-color: #ffb800;
+}
+
+.text-accent {
+  color: #ffb800;
+}
+
+.text-primary-dark {
+  color: #3d352a;
+}
+
+.border-accent {
+  border-color: #ffb800;
+}
