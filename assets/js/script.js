@@ -17,7 +17,6 @@ document.addEventListener('DOMContentLoaded', function() {
       initClassName: 'aos-init', // Classe aplicada após inicialização
       animatedClassName: 'aos-animate', // Classe aplicada na animação
     });
-    console.log('AOS inicializado com sucesso!');
   } else {
     console.warn('AOS não foi carregado. Verifique se a biblioteca está incluída.');
   }
@@ -45,11 +44,6 @@ document.addEventListener('DOMContentLoaded', function() {
   // MENU MOBILE
   // ================================
   setupMobileMenu();
-
-  // ================================
-  // FORMULÁRIO DE CONTATO
-  // ================================
-  setupContactForm();
 });
 
 // ================================
@@ -174,7 +168,6 @@ function setupCarousel(carouselId) {
   // Mostrar primeiro slide
   showSlide(0);
   
-  console.log(`Carrossel "${carouselId}" inicializado com ${items.length} itens.`);
 }
 
 // ================================
@@ -277,9 +270,3 @@ function refreshAOS() {
     AOS.refresh();
   }
 }
-
-// ================================
-// LOG DE INICIALIZAÇÃO
-// ================================
-console.log('🚀 RC Montador de Móveis - Scripts carregados com sucesso!');
-console.log('📱 Para suporte: contato@rcmontador.com.br');
