@@ -225,61 +225,6 @@ function closeMobileMenu() {
 }
 
 // ================================
-// FORMULÁRIO DE CONTATO
-// ================================
-function setupContactForm() {
-  const contactForm = document.getElementById('contactForm');
-  
-  if (contactForm) {
-    contactForm.addEventListener('submit', function(e) {
-      e.preventDefault();
-      
-      // Coletar dados do formulário
-      const formData = new FormData(this);
-      const nome = formData.get('nome');
-      const telefone = formData.get('telefone');
-      const email = formData.get('email');
-      const servico = formData.get('servico');
-      const mensagem = formData.get('mensagem');
-      
-      // Validação básica
-      if (!nome || !telefone || !servico) {
-        alert('Por favor, preencha todos os campos obrigatórios.');
-        return;
-      }
-      
-      // Criar mensagem para WhatsApp
-      const whatsappMessage = `
-🏠 *Solicitação de Orçamento - RC Montador de Móveis*
-
-👤 *Nome:* ${nome}
-📱 *Telefone:* ${telefone}
-📧 *E-mail:* ${email || 'Não informado'}
-🔧 *Serviço:* ${servico}
-💬 *Mensagem:* ${mensagem || 'Não informado'}
-
-_Mensagem enviada através do site_
-      `.trim();
-      
-      // Número do WhatsApp (substitua pelo número real)
-      const whatsappNumber = '5516999999999'; // Formato: código do país + DDD + número
-      
-      // Criar URL do WhatsApp
-      const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
-      
-      // Abrir WhatsApp
-      window.open(whatsappUrl, '_blank');
-      
-      // Limpar formulário
-      this.reset();
-      
-      // Mostrar mensagem de sucesso
-      alert('Redirecionando para o WhatsApp...');
-    });
-  }
-}
-
-// ================================
 // FUNÇÕES UTILITÁRIAS
 // ================================
 
